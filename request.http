@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/goldenwiki/
+Content-Type: application/json
+
+{
+    "title": "1+1",
+    "content": "2"
+}
+
+###
+
+GET http://localhost:3000/api/goldenwiki/64d4b4fa59698c6f5d63b933
+
+###
+GET http://localhost:3000/api/goldenwiki/
+
+###
+
+PATCH http://localhost:3000/api/goldenwiki/64d4b4fa59698c6f5d63b933
+Content-Type: application/json
+
+{
+    "title": "goldenpaper",
+    "content": "He made me! Thanks!"
+}
+
+###
+
+DELETE http://localhost:3000/api/goldenwiki/64d629057bb59cd7cab3d31b
