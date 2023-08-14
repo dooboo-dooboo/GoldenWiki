@@ -3,6 +3,7 @@ import axios from "@/lib/axios";
 import dbConnect from "@/db/dbConnect";
 import GoldenWiki from "@/db/models/GoldenWiki";
 import { useRouter } from "next/router";
+import UrlBtn from "@/components/UrlBtn";
 
 export async function getServerSideProps() {
     await dbConnect();
@@ -24,6 +25,7 @@ export default function WikiCreatePage(wikis) {
 
     return (
         <>
+            <UrlBtn href={'/'} />
             <h1>New Wiki</h1>
             <WikiForm onSubmit={handleSubmit} wikis={wikis} />
         </>
