@@ -6,6 +6,7 @@ import GoldenWiki from "@/db/models/GoldenWiki";
 import WikiForm, { WikiFormType } from "@/components/NewWikiForm";
 import axios from "@/lib/axios";
 import UrlBtn from "@/components/UrlBtn";
+import Navbar from "@/components/Navbar";
 
 export async function getServerSideProps(context) {
     const { title } = context.query;
@@ -36,11 +37,12 @@ export default function WikiTitle({ wikis }) {
     }
     return (
         <>
+            <Navbar />
             <UrlBtn href={'/searchWiki'} />
             <WikiContent title={wikis.title} content={wikis.content}/>
             
             <div className="patch">
-                <h2>Patch</h2>
+                <h2 className="middle-x">Patch</h2>
                 <WikiForm type={WikiFormType.Edit} initialValues={{
                     title: title,
                     content: wikis.content,

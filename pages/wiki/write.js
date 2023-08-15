@@ -4,6 +4,7 @@ import dbConnect from "@/db/dbConnect";
 import GoldenWiki from "@/db/models/GoldenWiki";
 import { useRouter } from "next/router";
 import UrlBtn from "@/components/UrlBtn";
+import Navbar from "@/components/Navbar";
 
 export async function getServerSideProps() {
     await dbConnect();
@@ -25,8 +26,9 @@ export default function WikiCreatePage(wikis) {
 
     return (
         <>
+            <Navbar />
             <UrlBtn href={'/'} />
-            <h1>New Wiki</h1>
+            <h1 className="middle-x">New Wiki</h1>
             <WikiForm onSubmit={handleSubmit} wikis={wikis} />
         </>
     )

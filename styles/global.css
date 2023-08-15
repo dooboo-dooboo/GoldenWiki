@@ -28,6 +28,10 @@
     margin-right: 30px;
 }
 
+.none-deco {
+    text-decoration: none;
+}
+
 html {
     padding: 0;
     margin: 0;
@@ -40,4 +44,31 @@ body {
 
 .patch {
     margin-top: 100px;
+}
+
+.contents-container {
+    list-style: none;
+    padding: 5px;
+}
+
+.contents {
+    margin: 10px;
+    height: 60px;
+}
+
+.contents-button {
+    height: 80%;
+}
+
+.full-x {
+    width: 100%;
+    margin: 5px;
+}
+
+.full-y{
+    height: 200px;
+}
+
+.middle-x {
+    text-align: center;
 }

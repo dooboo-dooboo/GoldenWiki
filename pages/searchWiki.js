@@ -22,10 +22,10 @@ export default function Search(wikis) {
             <Navbar />
             <Searchbar setSearchData={setSearchData}/>
             {searchData || 
-                <ul>
+                <ul className="contents-container">
                     {wikis.wikis.map((wiki) => (
-                        <li key={wiki.id}>
-                            <WikiButton title={wiki.title} />
+                        <li key={wiki.id} className="contents bg_green">
+                            <WikiButton title={wiki.title} className="contents-button" />
                         </li>
                     ))}
                 </ul>
@@ -33,11 +33,11 @@ export default function Search(wikis) {
             {
                 searchData != ""
                 ? 
-                <ul>
+                <ul className="contents-container">
                     {wikis.wikis.map((wiki) => (
                         (wiki.title.indexOf(searchData) != -1)
-                        ? <li key={wiki.id}>
-                            <WikiButton title={wiki.title} />
+                        ? <li key={wiki.id} className="contents bg_green">
+                            <WikiButton title={wiki.title} className="contents-button" />
                         </li>
                         : null
                         

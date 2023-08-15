@@ -4,7 +4,9 @@ export default function UrlBtn({ href }) {
     
     return (
         <div>
-            <Link href={href}>Back</Link>
+            <button>
+                <Link href={href} className="none-deco">Back</Link>
+            </button>
         </div>
     )
 }

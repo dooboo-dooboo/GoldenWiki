@@ -21,7 +21,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Link href="/wiki">All wikis</Link>
+      <h1 className='middle-x'>GoldenPaper가 만든 위키</h1>
+      <br />
+      <h2 className='middle-x'>다른 사람에게 정보를 주기 위해 새로운 위키를 만드세요!</h2>
+      <h2 className='middle-x'>다른 사람들이 공개한 점보를 얻고 수정하세요!</h2>
     </>
   )
 }

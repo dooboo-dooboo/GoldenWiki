@@ -6,16 +6,16 @@ export default function Navbar() {
         <div className="bg_green">
             <ul className="noneStyle">
                 <li>
-                    <p className="white h1">GoldenWiki</p>
+                    <img src="/GoldenWikiLogo.png" width={300} height={125} />
                 </li>
                 <li className="inline navLink">
-                    <Link href="/" className="white h2 inline">Home</Link>
+                    <Link href="/" className="white h2 inline none-deco">Home</Link>
                 </li>
                 <li className="inline navLink">
-                    <Link href="/searchWiki" className="white h2 inline">Search</Link>
+                    <Link href="/searchWiki" className="white h2 inline none-deco">Search</Link>
                 </li>
                 <li className="inline navLink">
-                    <Link href="/wiki/write" className="white h2 inline">Write</Link>
+                    <Link href="/wiki/write" className="white h2 inline none-deco">Write</Link>
                 </li>
             </ul>
         </div>

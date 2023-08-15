@@ -71,8 +71,8 @@ export default function WikiForm({
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleTitleChange} placeholder="GoldenWiki에 올릴 주제를 입력해주세요." ref={titleInput} />
-                <textarea onChange={handleContentChange} placeholder="주제의 내용을 입력하세요." ref={contentInput}></textarea>
+                <input onChange={handleTitleChange} placeholder="GoldenWiki에 올릴 주제를 입력해주세요." ref={titleInput} className="full-x" />
+                <textarea onChange={handleContentChange} placeholder="주제의 내용을 입력하세요." ref={contentInput} className="full-x full-y" ></textarea>
                 <button>Upload</button>
             </form>
         </>
