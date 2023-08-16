@@ -31,9 +31,8 @@ export default function WikiTitle({ wikis }) {
     const { title } = router.query;
 
     async function handleSubmit(values) {
-        console.log(wikis);
         await axios.patch(`/goldenwiki/${wikis._id}`, values);
-        router.push('/wiki');
+        router.push('/searchWiki');
     }
     return (
         <>

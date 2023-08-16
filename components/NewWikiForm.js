@@ -6,14 +6,17 @@ export const WikiFormType = {
     Edit: 'edit',
 };
 
+
 export default function WikiForm({
+    wikis,
     type = WikiFormType.Create,
     initialValues = {
         title: '',
         content: '',
     },
     onSubmit,
-}, wikis) {
+    
+}) {
     const {title, content} = initialValues;
     const [values, setValues] = useState({ title, content });
     const [isNew, setIsNew] = useState(true);
@@ -29,25 +32,33 @@ export default function WikiForm({
         }
     }, [])
 
+    function findTitleInWiki(nowTitle) {
+        for (let i = 0; i < Object.keys(wikis).length; i++) {
+            if (wikis[i].title == nowTitle) {
+                setIsNew(false);
+                return;
+            }
+            
+        }
+        setIsNew(true);
+    }
+
+    useEffect(() => {
+        if (type == WikiFormType.Create) {
+            findTitleInWiki(values.title);
+        }
+    }, [values.title])
+
     async function handleSubmit(e) {
         e.preventDefault();
-        setIsNew(true);
-        console.log(wikis);
-        const wikisLength = Object.keys(wikis).length;
-        for (let i = 0; i < wikisLength; i++) {
-            wikis && wikis[i].map((element) => {
-                if (element.title == values[0]) {
-                    setIsNew(false);
-                }
-            });
-        }
-        
         if (isNew) {
             await onSubmit(values);
             setValues({
                 title: '',
                 content: '',
             });
+        } else {
+            alert("이미 존재하는 주제입니다.");
         }
         
     }
