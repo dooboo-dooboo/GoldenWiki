@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import axios from '@/lib/axios';
 import { useState } from 'react';
+import HelpBox from '@/components/HelpBox';
 
 
 
@@ -24,7 +25,13 @@ export default function Home() {
       <h1 className='middle-x'>GoldenPaper가 만든 위키</h1>
       <br />
       <h2 className='middle-x'>다른 사람에게 정보를 주기 위해 새로운 위키를 만드세요!</h2>
-      <h2 className='middle-x'>다른 사람들이 공개한 점보를 얻고 수정하세요!</h2>
+      <h2 className='middle-x'>다른 사람들이 공개한 정보를 얻고 수정하세요!</h2>
+      <br /><br />
+      <div id='help'>
+        <HelpBox imgSrc={"/help1.png"}/>
+        <HelpBox imgSrc={"/help2.png"}/>
+        <HelpBox imgSrc={"/help3.png"}/>
+      </div>
     </>
   )
 }
