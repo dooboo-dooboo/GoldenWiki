@@ -86,6 +86,6 @@ body {
 
 #help {
     width: 100%;
-    padding-left: 0.5%;
-    padding-right: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
 }
